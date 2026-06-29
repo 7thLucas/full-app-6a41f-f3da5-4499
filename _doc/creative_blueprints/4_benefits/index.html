@@ -10,48 +10,46 @@
 
     <!-- Header -->
     <div class="flex flex-col gap-2">
-      <span class="text-xs font-semibold tracking-widest uppercase" style="color: {{config.theme.accentColor}}; font-family: {{config.theme.fontFamily}};">Business Impact</span>
-      <h2 class="text-3xl font-bold" style="color: {{config.theme.primaryColor}}; font-family: {{config.theme.fontFamily}};">Measurable outcomes for your hiring team</h2>
+      <span style="font-family: {{config.font.textFont}}; color: {{config.brandColor.secondary}}; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;">Business Impact</span>
+      <h2 style="font-family: {{config.font.headingFont}}; color: {{config.brandColor.primary}}; font-size: 2.1rem; font-weight: 800; line-height: 1.2;">Measurable outcomes for your hiring team</h2>
     </div>
 
     <!-- Metric cards -->
     <div class="sl-grid grid gap-4">
-
-      <div class="rounded-2xl p-5 flex flex-col gap-2" style="border: 1px solid #e2e8f0; background: #f8fafc;">
-        <span class="text-xs font-medium uppercase tracking-wide" style="color: {{config.theme.accentColor}}; font-family: {{config.theme.fontFamily}};">Speed</span>
-        <div class="text-4xl font-bold" style="color: {{config.theme.primaryColor}}; font-family: {{config.theme.fontFamily}};">10×</div>
-        <p class="text-sm" style="color: #475569; font-family: Inter, sans-serif;">Faster initial screening vs. manual resume review — hours become minutes per role.</p>
+      <div class="rounded-2xl p-5 flex flex-col gap-2" style="background-color: {{config.brandColor.card}}; border: 1px solid {{config.brandColor.border}};">
+        <span style="font-family: {{config.font.textFont}}; color: {{config.brandColor.secondary}}; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;">Speed</span>
+        <div style="font-family: {{config.font.headingFont}}; color: {{config.brandColor.primary}}; font-size: 2.5rem; font-weight: 800; line-height: 1;">10×</div>
+        <p style="font-family: {{config.font.textFont}}; color: {{config.brandColor.mutedForeground}}; font-size: 0.8rem; line-height: 1.6;">Faster initial screening vs manual review — hours of reading compress into minutes per role.</p>
       </div>
 
-      <div class="rounded-2xl p-5 flex flex-col gap-2" style="border: 1px solid #e2e8f0; background: #f8fafc;">
-        <span class="text-xs font-medium uppercase tracking-wide" style="color: {{config.theme.accentColor}}; font-family: {{config.theme.fontFamily}};">Consistency</span>
-        <div class="text-4xl font-bold" style="color: {{config.theme.primaryColor}}; font-family: {{config.theme.fontFamily}};">100%</div>
-        <p class="text-sm" style="color: #475569; font-family: Inter, sans-serif;">Every candidate evaluated against the same criteria — no fatigue, no bias from varying reviewers.</p>
+      <div class="rounded-2xl p-5 flex flex-col gap-2" style="background-color: {{config.brandColor.card}}; border: 1px solid {{config.brandColor.border}};">
+        <span style="font-family: {{config.font.textFont}}; color: {{config.brandColor.secondary}}; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;">Consistency</span>
+        <div style="font-family: {{config.font.headingFont}}; color: {{config.brandColor.primary}}; font-size: 2.5rem; font-weight: 800; line-height: 1;">100%</div>
+        <p style="font-family: {{config.font.textFont}}; color: {{config.brandColor.mutedForeground}}; font-size: 0.8rem; line-height: 1.6;">Every candidate evaluated against the same criteria — no reviewer fatigue, no subjective drift.</p>
       </div>
 
-      <div class="rounded-2xl p-5 flex flex-col gap-2" style="border: 1px solid #e2e8f0; background: #f8fafc;">
-        <span class="text-xs font-medium uppercase tracking-wide" style="color: {{config.theme.accentColor}}; font-family: {{config.theme.fontFamily}};">Time Saved</span>
-        <div class="text-4xl font-bold" style="color: {{config.theme.primaryColor}}; font-family: {{config.theme.fontFamily}};">25 min</div>
-        <p class="text-sm" style="color: #475569; font-family: Inter, sans-serif;">Saved per candidate screening — across 60 weekly screenings, that's 25 hours returned to your team per week.</p>
+      <div class="rounded-2xl p-5 flex flex-col gap-2" style="background-color: {{config.brandColor.card}}; border: 1px solid {{config.brandColor.border}};">
+        <span style="font-family: {{config.font.textFont}}; color: {{config.brandColor.secondary}}; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em;">Time Saved</span>
+        <div style="font-family: {{config.font.headingFont}}; color: {{config.brandColor.primary}}; font-size: 2.5rem; font-weight: 800; line-height: 1;">25 min</div>
+        <p style="font-family: {{config.font.textFont}}; color: {{config.brandColor.mutedForeground}}; font-size: 0.8rem; line-height: 1.6;">Saved per candidate screening. Across 60 weekly screenings, that's 25 hours returned to your team each week.</p>
       </div>
-
     </div>
 
-    <!-- ROI Summary block -->
-    <div class="rounded-2xl p-6" style="background: {{config.theme.primaryColor}};">
-      <p class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: rgba(255,255,255,0.6); font-family: {{config.theme.fontFamily}};">ROI Summary</p>
+    <!-- ROI Summary -->
+    <div class="rounded-2xl p-6" style="background-color: {{config.brandColor.primary}};">
+      <p style="font-family: {{config.font.textFont}}; color: rgba(255,255,255,0.55); font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1.25rem;">ROI Summary</p>
       <div class="sl-roi flex">
-        <div class="flex flex-col gap-1">
-          <div class="text-3xl font-bold" style="color: #ffffff; font-family: {{config.theme.fontFamily}};">$875 / week</div>
-          <div class="text-sm" style="color: rgba(255,255,255,0.75); font-family: Inter, sans-serif;">Estimated value from time saved (3 recruiters × 20 screenings × 25 min × $35/hr)</div>
+        <div class="flex flex-col gap-1 flex-1">
+          <div style="font-family: {{config.font.headingFont}}; color: {{config.brandColor.primaryForeground}}; font-size: 1.9rem; font-weight: 800;">$875 / week</div>
+          <div style="font-family: {{config.font.textFont}}; color: rgba(255,255,255,0.7); font-size: 0.8rem; line-height: 1.5;">3 recruiters × 20 screenings × 25 min × $35/hr</div>
         </div>
-        <div class="flex flex-col gap-1">
-          <div class="text-3xl font-bold" style="color: #ffffff; font-family: {{config.theme.fontFamily}};">$45,500 / year</div>
-          <div class="text-sm" style="color: rgba(255,255,255,0.75); font-family: Inter, sans-serif;">Annual recruiter time reclaimed — reinvested into higher-value hiring activities.</div>
+        <div class="flex flex-col gap-1 flex-1">
+          <div style="font-family: {{config.font.headingFont}}; color: {{config.brandColor.primaryForeground}}; font-size: 1.9rem; font-weight: 800;">$45,500 / year</div>
+          <div style="font-family: {{config.font.textFont}}; color: rgba(255,255,255,0.7); font-size: 0.8rem; line-height: 1.5;">Annual recruiter time reclaimed — reinvested in higher-value hiring work.</div>
         </div>
-        <div class="flex flex-col gap-1">
-          <div class="text-3xl font-bold" style="color: {{config.theme.accentColor}}; font-family: {{config.theme.fontFamily}};">Faster decisions</div>
-          <div class="text-sm" style="color: rgba(255,255,255,0.75); font-family: Inter, sans-serif;">Top candidates identified before competitors extend offers — reducing offer-stage drop-off.</div>
+        <div class="flex flex-col gap-1 flex-1">
+          <div style="font-family: {{config.font.headingFont}}; color: {{config.brandColor.secondary}}; font-size: 1.9rem; font-weight: 800;">Faster offers</div>
+          <div style="font-family: {{config.font.textFont}}; color: rgba(255,255,255,0.7); font-size: 0.8rem; line-height: 1.5;">Top candidates identified before competitors extend offers — reducing drop-off at offer stage.</div>
         </div>
       </div>
     </div>
