@@ -1,0 +1,60 @@
+<style>
+  .mode-landscape .sl-grid { grid-template-columns: repeat(3, 1fr); }
+  .mode-portrait .sl-grid { grid-template-columns: repeat(2, 1fr); }
+  .mode-landscape .sl-roi { flex-direction: row; gap: 2rem; }
+  .mode-portrait .sl-roi { flex-direction: column; gap: 1rem; }
+</style>
+
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="w-full h-full flex flex-col p-12 gap-6">
+
+    <!-- Header -->
+    <div class="flex flex-col gap-2">
+      <span class="text-xs font-semibold tracking-widest uppercase" style="color: {{config.theme.accentColor}}; font-family: {{config.theme.fontFamily}};">Business Impact</span>
+      <h2 class="text-3xl font-bold" style="color: {{config.theme.primaryColor}}; font-family: {{config.theme.fontFamily}};">Measurable outcomes for your hiring team</h2>
+    </div>
+
+    <!-- Metric cards -->
+    <div class="sl-grid grid gap-4">
+
+      <div class="rounded-2xl p-5 flex flex-col gap-2" style="border: 1px solid #e2e8f0; background: #f8fafc;">
+        <span class="text-xs font-medium uppercase tracking-wide" style="color: {{config.theme.accentColor}}; font-family: {{config.theme.fontFamily}};">Speed</span>
+        <div class="text-4xl font-bold" style="color: {{config.theme.primaryColor}}; font-family: {{config.theme.fontFamily}};">10×</div>
+        <p class="text-sm" style="color: #475569; font-family: Inter, sans-serif;">Faster initial screening vs. manual resume review — hours become minutes per role.</p>
+      </div>
+
+      <div class="rounded-2xl p-5 flex flex-col gap-2" style="border: 1px solid #e2e8f0; background: #f8fafc;">
+        <span class="text-xs font-medium uppercase tracking-wide" style="color: {{config.theme.accentColor}}; font-family: {{config.theme.fontFamily}};">Consistency</span>
+        <div class="text-4xl font-bold" style="color: {{config.theme.primaryColor}}; font-family: {{config.theme.fontFamily}};">100%</div>
+        <p class="text-sm" style="color: #475569; font-family: Inter, sans-serif;">Every candidate evaluated against the same criteria — no fatigue, no bias from varying reviewers.</p>
+      </div>
+
+      <div class="rounded-2xl p-5 flex flex-col gap-2" style="border: 1px solid #e2e8f0; background: #f8fafc;">
+        <span class="text-xs font-medium uppercase tracking-wide" style="color: {{config.theme.accentColor}}; font-family: {{config.theme.fontFamily}};">Time Saved</span>
+        <div class="text-4xl font-bold" style="color: {{config.theme.primaryColor}}; font-family: {{config.theme.fontFamily}};">25 min</div>
+        <p class="text-sm" style="color: #475569; font-family: Inter, sans-serif;">Saved per candidate screening — across 60 weekly screenings, that's 25 hours returned to your team per week.</p>
+      </div>
+
+    </div>
+
+    <!-- ROI Summary block -->
+    <div class="rounded-2xl p-6" style="background: {{config.theme.primaryColor}};">
+      <p class="text-xs font-semibold uppercase tracking-widest mb-4" style="color: rgba(255,255,255,0.6); font-family: {{config.theme.fontFamily}};">ROI Summary</p>
+      <div class="sl-roi flex">
+        <div class="flex flex-col gap-1">
+          <div class="text-3xl font-bold" style="color: #ffffff; font-family: {{config.theme.fontFamily}};">$875 / week</div>
+          <div class="text-sm" style="color: rgba(255,255,255,0.75); font-family: Inter, sans-serif;">Estimated value from time saved (3 recruiters × 20 screenings × 25 min × $35/hr)</div>
+        </div>
+        <div class="flex flex-col gap-1">
+          <div class="text-3xl font-bold" style="color: #ffffff; font-family: {{config.theme.fontFamily}};">$45,500 / year</div>
+          <div class="text-sm" style="color: rgba(255,255,255,0.75); font-family: Inter, sans-serif;">Annual recruiter time reclaimed — reinvested into higher-value hiring activities.</div>
+        </div>
+        <div class="flex flex-col gap-1">
+          <div class="text-3xl font-bold" style="color: {{config.theme.accentColor}}; font-family: {{config.theme.fontFamily}};">Faster decisions</div>
+          <div class="text-sm" style="color: rgba(255,255,255,0.75); font-family: Inter, sans-serif;">Top candidates identified before competitors extend offers — reducing offer-stage drop-off.</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
