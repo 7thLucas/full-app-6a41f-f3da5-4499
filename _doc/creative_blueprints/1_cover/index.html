@@ -2,7 +2,7 @@
   .mode-landscape .sl-layout { flex-direction: row; }
   .mode-portrait .sl-layout { flex-direction: column; }
   .mode-landscape .sl-visual { width: 45%; }
-  .mode-portrait .sl-visual { width: 100%; height: 40%; }
+  .mode-portrait .sl-visual { display: none; }
   .mode-landscape .sl-content { width: 55%; }
   .mode-portrait .sl-content { width: 100%; }
 </style>
@@ -11,24 +11,24 @@
   <div class="sl-layout w-full h-full flex">
 
     <!-- Left: Content -->
-    <div class="sl-content flex flex-col justify-between p-12" style="background: #ffffff;">
-      <!-- Top accent bar -->
+    <div class="sl-content flex flex-col justify-between p-12" style="background-color: {{config.brandColor.primary}};">
+      <!-- Logo row -->
       <div class="flex items-center gap-3">
-        <div class="w-8 h-1 rounded-full" style="background: {{config.theme.accentColor}};"></div>
-        <span class="text-xs font-semibold tracking-widest uppercase" style="color: {{config.theme.accentColor}}; font-family: {{config.theme.fontFamily}};">Recruitment Intelligence</span>
+        <img src="{{config.logoUrl}}" width="34" height="34" alt="{{config.appName}}" style="border-radius: 8px;" />
+        <span style="font-family: {{config.font.headingFont}}; color: {{config.brandColor.primaryForeground}}; font-size: 0.8rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;">{{config.appName}}</span>
       </div>
 
-      <!-- Main headline -->
-      <div class="flex flex-col gap-6">
-        <h1 class="text-5xl font-bold leading-tight" style="color: {{config.theme.primaryColor}}; font-family: {{config.theme.fontFamily}};">
-          {{config.appName}}
-        </h1>
-        <p class="text-2xl font-light" style="color: #334155; font-family: Inter, sans-serif; max-width: 380px; line-height: 1.4;">
-          {{config.tagline}}
-        </p>
-        <p class="text-base" style="color: #64748b; font-family: Inter, sans-serif; max-width: 360px; line-height: 1.6;">
-          AI-powered resume screening that compares every candidate to your job requirements — surfacing the best fits in minutes, not hours.
-        </p>
+      <!-- Headline block -->
+      <div class="flex flex-col gap-5">
+        <span style="display: inline-block; padding: 0.2rem 0.8rem; border-radius: 9999px; border: 1px solid {{config.brandColor.secondary}}; background-color: {{config.brandColor.sidebarAccent}}; font-family: {{config.font.textFont}}; color: {{config.brandColor.secondary}}; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.09em; text-transform: uppercase; width: fit-content;">AI-Powered Recruiting</span>
+        <h1 style="font-family: {{config.font.headingFont}}; color: {{config.brandColor.primaryForeground}}; font-size: 2.75rem; font-weight: 800; line-height: 1.1;">{{config.tagline}}</h1>
+        <p style="font-family: {{config.font.textFont}}; color: {{config.brandColor.sidebarForeground}}; font-size: 0.975rem; line-height: 1.65; max-width: 38ch;">Eliminate inconsistent evaluations. {{config.appName}} uses AI to compare every candidate against your job requirements — delivering explainable match scores and ranked shortlists in minutes.</p>
+        <!-- Capability chips -->
+        <div class="flex flex-wrap gap-2">
+          <span style="display: inline-block; padding: 0.25rem 0.75rem; border-radius: 9999px; background-color: {{config.brandColor.sidebarAccent}}; border: 1px solid {{config.brandColor.sidebarBorder}}; font-family: {{config.font.textFont}}; color: {{config.brandColor.sidebarForeground}}; font-size: 0.72rem; font-weight: 500;">AI Match Scoring</span>
+          <span style="display: inline-block; padding: 0.25rem 0.75rem; border-radius: 9999px; background-color: {{config.brandColor.sidebarAccent}}; border: 1px solid {{config.brandColor.sidebarBorder}}; font-family: {{config.font.textFont}}; color: {{config.brandColor.sidebarForeground}}; font-size: 0.72rem; font-weight: 500;">Skill Gap Detection</span>
+          <span style="display: inline-block; padding: 0.25rem 0.75rem; border-radius: 9999px; background-color: {{config.brandColor.sidebarAccent}}; border: 1px solid {{config.brandColor.sidebarBorder}}; font-family: {{config.font.textFont}}; color: {{config.brandColor.sidebarForeground}}; font-size: 0.72rem; font-weight: 500;">Hiring Pipeline</span>
+        </div>
       </div>
 
       <!-- Attribution -->
@@ -38,21 +38,21 @@
     </div>
 
     <!-- Right: Visual -->
-    <div class="sl-visual flex items-center justify-center relative overflow-hidden" style="background: {{config.theme.primaryColor}};">
+    <div class="sl-visual flex items-center justify-center relative overflow-hidden" style="background-color: {{config.brandColor.sidebarBackground}};">
       <img
-        src="https://api-stag.qb-deck.quantumbyte.ai/common/image-generation?prompt=A%20clean%20modern%20recruiter%20dashboard%20showing%20AI%20candidate%20match%20scores%20and%20resume%20cards%20on%20a%20dark%20navy%20background%2C%20professional%20enterprise%20UI%2C%20minimal%20design"
-        alt="RecruitIQ Dashboard"
-        class="w-full h-full object-cover opacity-80"
+        src="https://api-stag.qb-deck.quantumbyte.ai/common/image-generation?prompt=Professional%20recruiter%20at%20modern%20desk%20reviewing%20AI-powered%20candidate%20analysis%20on%20screen%2C%20clean%20corporate%20office%2C%20navy%20blue%20and%20electric%20blue%20tones%2C%20high%20quality%20editorial%20photography%2C%20soft%20lighting"
+        alt="{{config.appName}} Dashboard"
+        style="width: 100%; height: 100%; object-fit: cover; opacity: 0.6;"
       />
-      <!-- Overlay stat cards -->
-      <div class="absolute bottom-8 left-8 right-8 flex flex-col gap-3">
-        <div class="rounded-xl p-4 flex items-center gap-4" style="background: rgba(255,255,255,0.12); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.2);">
-          <div class="text-3xl font-bold" style="color: #ffffff; font-family: {{config.theme.fontFamily}};">94%</div>
-          <div class="text-sm" style="color: rgba(255,255,255,0.8); font-family: Inter, sans-serif;">Average screening accuracy</div>
+      <!-- Floating stat cards -->
+      <div class="absolute bottom-8 left-6 right-6 flex flex-col gap-3">
+        <div style="border-radius: 12px; padding: 1rem 1.25rem; background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.18); backdrop-filter: blur(8px);">
+          <p style="font-family: {{config.font.headingFont}}; color: {{config.brandColor.primaryForeground}}; font-size: 1.75rem; font-weight: 800; line-height: 1;">25 min</p>
+          <p style="font-family: {{config.font.textFont}}; color: {{config.brandColor.sidebarForeground}}; font-size: 0.75rem; margin-top: 2px; opacity: 0.85;">saved per candidate vs manual review</p>
         </div>
-        <div class="rounded-xl p-4 flex items-center gap-4" style="background: rgba(45,125,210,0.7); backdrop-filter: blur(8px); border: 1px solid rgba(255,255,255,0.2);">
-          <div class="text-3xl font-bold" style="color: #ffffff; font-family: {{config.theme.fontFamily}};">10×</div>
-          <div class="text-sm" style="color: rgba(255,255,255,0.85); font-family: Inter, sans-serif;">Faster than manual review</div>
+        <div style="border-radius: 12px; padding: 1rem 1.25rem; background-color: {{config.brandColor.secondary}}; border: 1px solid rgba(255,255,255,0.15);">
+          <p style="font-family: {{config.font.headingFont}}; color: {{config.brandColor.primaryForeground}}; font-size: 1.75rem; font-weight: 800; line-height: 1;">$45,500/yr</p>
+          <p style="font-family: {{config.font.textFont}}; color: {{config.brandColor.primaryForeground}}; font-size: 0.75rem; margin-top: 2px; opacity: 0.85;">projected annual value for your hiring team</p>
         </div>
       </div>
     </div>
