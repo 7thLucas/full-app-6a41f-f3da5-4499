@@ -1,0 +1,74 @@
+<style>
+  .mode-landscape .sl-grid { grid-template-columns: repeat(3, 1fr); }
+  .mode-portrait .sl-grid { grid-template-columns: repeat(2, 1fr); }
+</style>
+
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="w-full h-full flex flex-col p-12 gap-6">
+
+    <!-- Header -->
+    <div class="flex flex-col gap-2">
+      <span class="text-xs font-semibold tracking-widest uppercase" style="color: {{config.theme.accentColor}}; font-family: {{config.theme.fontFamily}};">Core Features</span>
+      <h2 class="text-3xl font-bold" style="color: {{config.theme.primaryColor}}; font-family: {{config.theme.fontFamily}};">Everything a recruiter needs, built in</h2>
+    </div>
+
+    <!-- Persona chips -->
+    <div class="flex gap-2">
+      <span class="px-4 py-1.5 rounded-full text-sm font-semibold text-white" style="background: {{config.theme.primaryColor}}; font-family: {{config.theme.fontFamily}};">Recruiter</span>
+      <span class="px-4 py-1.5 rounded-full text-sm font-medium border" style="color: #64748b; border-color: #e2e8f0; font-family: {{config.theme.fontFamily}};">Hiring Manager</span>
+    </div>
+
+    <!-- Feature cards grid -->
+    <div class="sl-grid grid gap-4 flex-1">
+
+      <div class="rounded-2xl p-5 flex flex-col gap-3" style="background: #f8fafc; border: 1px solid #e2e8f0;">
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center text-xl" style="background: #eff6ff;">📄</div>
+        <div>
+          <p class="font-semibold text-sm mb-1" style="color: {{config.theme.primaryColor}}; font-family: {{config.theme.fontFamily}};">Resume & JD Upload</p>
+          <p class="text-xs leading-relaxed" style="color: #64748b; font-family: Inter, sans-serif;">Bulk upload resumes (PDF/DOCX) and paste or upload job descriptions. One job, many candidates — instantly organized.</p>
+        </div>
+      </div>
+
+      <div class="rounded-2xl p-5 flex flex-col gap-3" style="background: {{config.theme.primaryColor}}; border: 1px solid {{config.theme.primaryColor}};">
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center text-xl" style="background: rgba(255,255,255,0.15);">🤖</div>
+        <div>
+          <p class="font-semibold text-sm mb-1" style="color: #ffffff; font-family: {{config.theme.fontFamily}};">AI Candidate Analysis</p>
+          <p class="text-xs leading-relaxed" style="color: rgba(255,255,255,0.8); font-family: Inter, sans-serif;">Match score, strengths, weaknesses, missing skills, and a recommendation — generated per candidate against the job.</p>
+        </div>
+      </div>
+
+      <div class="rounded-2xl p-5 flex flex-col gap-3" style="background: #f8fafc; border: 1px solid #e2e8f0;">
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center text-xl" style="background: #eff6ff;">🏆</div>
+        <div>
+          <p class="font-semibold text-sm mb-1" style="color: {{config.theme.primaryColor}}; font-family: {{config.theme.fontFamily}};">Candidate Ranking</p>
+          <p class="text-xs leading-relaxed" style="color: #64748b; font-family: Inter, sans-serif;">All applicants sorted by AI fit score. Top-recommended candidates highlighted so the best rises to the top automatically.</p>
+        </div>
+      </div>
+
+      <div class="rounded-2xl p-5 flex flex-col gap-3" style="background: #f8fafc; border: 1px solid #e2e8f0;">
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center text-xl" style="background: #eff6ff;">🗂️</div>
+        <div>
+          <p class="font-semibold text-sm mb-1" style="color: {{config.theme.primaryColor}}; font-family: {{config.theme.fontFamily}};">Hiring Pipeline</p>
+          <p class="text-xs leading-relaxed" style="color: #64748b; font-family: Inter, sans-serif;">Kanban pipeline: Applied → Screened → Shortlisted → Interview → Offer → Hired. Every candidate has a clear status.</p>
+        </div>
+      </div>
+
+      <div class="rounded-2xl p-5 flex flex-col gap-3" style="background: #f8fafc; border: 1px solid #e2e8f0;">
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center text-xl" style="background: #eff6ff;">📊</div>
+        <div>
+          <p class="font-semibold text-sm mb-1" style="color: {{config.theme.primaryColor}}; font-family: {{config.theme.fontFamily}};">Skill Gap Report</p>
+          <p class="text-xs leading-relaxed" style="color: #64748b; font-family: Inter, sans-serif;">Visual breakdown of skills most commonly missing across the applicant pool — helps refine job requirements over time.</p>
+        </div>
+      </div>
+
+      <div class="rounded-2xl p-5 flex flex-col gap-3" style="background: #f8fafc; border: 1px solid #e2e8f0;">
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center text-xl" style="background: #eff6ff;">🖥️</div>
+        <div>
+          <p class="font-semibold text-sm mb-1" style="color: {{config.theme.primaryColor}}; font-family: {{config.theme.fontFamily}};">Recruiter Dashboard</p>
+          <p class="text-xs leading-relaxed" style="color: #64748b; font-family: Inter, sans-serif;">Overview of open roles, total applicants, screening progress, and shortlist counts — at a glance, always current.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
