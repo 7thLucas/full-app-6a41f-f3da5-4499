@@ -8,64 +8,64 @@
 
     <!-- Header -->
     <div class="flex flex-col gap-2">
-      <span class="text-xs font-semibold tracking-widest uppercase" style="color: {{config.theme.accentColor}}; font-family: {{config.theme.fontFamily}};">Core Features</span>
-      <h2 class="text-3xl font-bold" style="color: {{config.theme.primaryColor}}; font-family: {{config.theme.fontFamily}};">Everything a recruiter needs, built in</h2>
+      <span style="font-family: {{config.font.textFont}}; color: {{config.brandColor.secondary}}; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;">Core Features</span>
+      <h2 style="font-family: {{config.font.headingFont}}; color: {{config.brandColor.primary}}; font-size: 2.1rem; font-weight: 800; line-height: 1.2;">Everything your hiring team needs, built in</h2>
     </div>
 
     <!-- Persona chips -->
     <div class="flex gap-2">
-      <span class="px-4 py-1.5 rounded-full text-sm font-semibold text-white" style="background: {{config.theme.primaryColor}}; font-family: {{config.theme.fontFamily}};">Recruiter</span>
-      <span class="px-4 py-1.5 rounded-full text-sm font-medium border" style="color: #64748b; border-color: #e2e8f0; font-family: {{config.theme.fontFamily}};">Hiring Manager</span>
+      <span style="display: inline-block; padding: 0.3rem 1rem; border-radius: 9999px; background-color: {{config.brandColor.primary}}; font-family: {{config.font.textFont}}; color: {{config.brandColor.primaryForeground}}; font-size: 0.82rem; font-weight: 600;">Recruiter</span>
+      <span style="display: inline-block; padding: 0.3rem 1rem; border-radius: 9999px; border: 1px solid {{config.brandColor.border}}; font-family: {{config.font.textFont}}; color: {{config.brandColor.mutedForeground}}; font-size: 0.82rem; font-weight: 500;">Hiring Manager</span>
     </div>
 
-    <!-- Feature cards grid -->
+    <!-- Feature cards -->
     <div class="sl-grid grid gap-4 flex-1">
 
-      <div class="rounded-2xl p-5 flex flex-col gap-3" style="background: #f8fafc; border: 1px solid #e2e8f0;">
-        <div class="w-10 h-10 rounded-xl flex items-center justify-center text-xl" style="background: #eff6ff;">📄</div>
+      <div class="rounded-2xl p-5 flex flex-col gap-3" style="background-color: {{config.brandColor.card}}; border: 1px solid {{config.brandColor.border}};">
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background-color: {{config.brandColor.accent}}; font-size: 1.25rem;">📄</div>
         <div>
-          <p class="font-semibold text-sm mb-1" style="color: {{config.theme.primaryColor}}; font-family: {{config.theme.fontFamily}};">Resume & JD Upload</p>
-          <p class="text-xs leading-relaxed" style="color: #64748b; font-family: Inter, sans-serif;">Bulk upload resumes (PDF/DOCX) and paste or upload job descriptions. One job, many candidates — instantly organized.</p>
+          <p style="font-family: {{config.font.headingFont}}; color: {{config.brandColor.primary}}; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.3rem;">Resume &amp; JD Upload</p>
+          <p style="font-family: {{config.font.textFont}}; color: {{config.brandColor.mutedForeground}}; font-size: 0.8rem; line-height: 1.6;">Bulk upload resumes (PDF/DOCX) and paste or upload job descriptions. One job, many candidates — instantly organized.</p>
         </div>
       </div>
 
-      <div class="rounded-2xl p-5 flex flex-col gap-3" style="background: {{config.theme.primaryColor}}; border: 1px solid {{config.theme.primaryColor}};">
-        <div class="w-10 h-10 rounded-xl flex items-center justify-center text-xl" style="background: rgba(255,255,255,0.15);">🤖</div>
+      <div class="rounded-2xl p-5 flex flex-col gap-3" style="background-color: {{config.brandColor.primary}}; border: 1px solid {{config.brandColor.primary}};">
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background-color: rgba(255,255,255,0.15); font-size: 1.25rem;">🤖</div>
         <div>
-          <p class="font-semibold text-sm mb-1" style="color: #ffffff; font-family: {{config.theme.fontFamily}};">AI Candidate Analysis</p>
-          <p class="text-xs leading-relaxed" style="color: rgba(255,255,255,0.8); font-family: Inter, sans-serif;">Match score, strengths, weaknesses, missing skills, and a recommendation — generated per candidate against the job.</p>
+          <p style="font-family: {{config.font.headingFont}}; color: {{config.brandColor.primaryForeground}}; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.3rem;">AI Candidate Analysis</p>
+          <p style="font-family: {{config.font.textFont}}; color: rgba(255,255,255,0.8); font-size: 0.8rem; line-height: 1.6;">Match score, strengths, weaknesses, missing skills, and hiring recommendation — per candidate, against the job description.</p>
         </div>
       </div>
 
-      <div class="rounded-2xl p-5 flex flex-col gap-3" style="background: #f8fafc; border: 1px solid #e2e8f0;">
-        <div class="w-10 h-10 rounded-xl flex items-center justify-center text-xl" style="background: #eff6ff;">🏆</div>
+      <div class="rounded-2xl p-5 flex flex-col gap-3" style="background-color: {{config.brandColor.card}}; border: 1px solid {{config.brandColor.border}};">
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background-color: {{config.brandColor.accent}}; font-size: 1.25rem;">🏆</div>
         <div>
-          <p class="font-semibold text-sm mb-1" style="color: {{config.theme.primaryColor}}; font-family: {{config.theme.fontFamily}};">Candidate Ranking</p>
-          <p class="text-xs leading-relaxed" style="color: #64748b; font-family: Inter, sans-serif;">All applicants sorted by AI fit score. Top-recommended candidates highlighted so the best rises to the top automatically.</p>
+          <p style="font-family: {{config.font.headingFont}}; color: {{config.brandColor.primary}}; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.3rem;">Candidate Ranking</p>
+          <p style="font-family: {{config.font.textFont}}; color: {{config.brandColor.mutedForeground}}; font-size: 0.8rem; line-height: 1.6;">All applicants sorted by AI fit score. Top-recommended candidates highlighted — the best rises automatically.</p>
         </div>
       </div>
 
-      <div class="rounded-2xl p-5 flex flex-col gap-3" style="background: #f8fafc; border: 1px solid #e2e8f0;">
-        <div class="w-10 h-10 rounded-xl flex items-center justify-center text-xl" style="background: #eff6ff;">🗂️</div>
+      <div class="rounded-2xl p-5 flex flex-col gap-3" style="background-color: {{config.brandColor.card}}; border: 1px solid {{config.brandColor.border}};">
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background-color: {{config.brandColor.accent}}; font-size: 1.25rem;">🗂️</div>
         <div>
-          <p class="font-semibold text-sm mb-1" style="color: {{config.theme.primaryColor}}; font-family: {{config.theme.fontFamily}};">Hiring Pipeline</p>
-          <p class="text-xs leading-relaxed" style="color: #64748b; font-family: Inter, sans-serif;">Kanban pipeline: Applied → Screened → Shortlisted → Interview → Offer → Hired. Every candidate has a clear status.</p>
+          <p style="font-family: {{config.font.headingFont}}; color: {{config.brandColor.primary}}; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.3rem;">Hiring Pipeline</p>
+          <p style="font-family: {{config.font.textFont}}; color: {{config.brandColor.mutedForeground}}; font-size: 0.8rem; line-height: 1.6;">Kanban pipeline: Applied → Screened → Shortlisted → Interview → Offer → Hired. Every candidate has a clear stage.</p>
         </div>
       </div>
 
-      <div class="rounded-2xl p-5 flex flex-col gap-3" style="background: #f8fafc; border: 1px solid #e2e8f0;">
-        <div class="w-10 h-10 rounded-xl flex items-center justify-center text-xl" style="background: #eff6ff;">📊</div>
+      <div class="rounded-2xl p-5 flex flex-col gap-3" style="background-color: {{config.brandColor.card}}; border: 1px solid {{config.brandColor.border}};">
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background-color: {{config.brandColor.accent}}; font-size: 1.25rem;">📊</div>
         <div>
-          <p class="font-semibold text-sm mb-1" style="color: {{config.theme.primaryColor}}; font-family: {{config.theme.fontFamily}};">Skill Gap Report</p>
-          <p class="text-xs leading-relaxed" style="color: #64748b; font-family: Inter, sans-serif;">Visual breakdown of skills most commonly missing across the applicant pool — helps refine job requirements over time.</p>
+          <p style="font-family: {{config.font.headingFont}}; color: {{config.brandColor.primary}}; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.3rem;">Skill Gap Report</p>
+          <p style="font-family: {{config.font.textFont}}; color: {{config.brandColor.mutedForeground}}; font-size: 0.8rem; line-height: 1.6;">Visual breakdown of skills most commonly missing across the applicant pool — helps refine job requirements over time.</p>
         </div>
       </div>
 
-      <div class="rounded-2xl p-5 flex flex-col gap-3" style="background: #f8fafc; border: 1px solid #e2e8f0;">
-        <div class="w-10 h-10 rounded-xl flex items-center justify-center text-xl" style="background: #eff6ff;">🖥️</div>
+      <div class="rounded-2xl p-5 flex flex-col gap-3" style="background-color: {{config.brandColor.card}}; border: 1px solid {{config.brandColor.border}};">
+        <div class="w-10 h-10 rounded-xl flex items-center justify-center" style="background-color: {{config.brandColor.accent}}; font-size: 1.25rem;">🖥️</div>
         <div>
-          <p class="font-semibold text-sm mb-1" style="color: {{config.theme.primaryColor}}; font-family: {{config.theme.fontFamily}};">Recruiter Dashboard</p>
-          <p class="text-xs leading-relaxed" style="color: #64748b; font-family: Inter, sans-serif;">Overview of open roles, total applicants, screening progress, and shortlist counts — at a glance, always current.</p>
+          <p style="font-family: {{config.font.headingFont}}; color: {{config.brandColor.primary}}; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.3rem;">Recruiter Dashboard</p>
+          <p style="font-family: {{config.font.textFont}}; color: {{config.brandColor.mutedForeground}}; font-size: 0.8rem; line-height: 1.6;">Open roles, total applicants, screening progress, and shortlist counts — at a glance, always current.</p>
         </div>
       </div>
 
