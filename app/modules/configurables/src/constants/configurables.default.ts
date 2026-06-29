@@ -64,67 +64,85 @@ export type TDefaultConfigurableData = {
   logoUrl: string;
   brandColor: TBrandColor;
   font: TFont;
-  // Mirror new schema fields here. Example:
-  //   maxItemsPerPage?: number;
-  //   enableNotifications?: boolean;
-  //   featuredCategories?: string[];
+  appTagline?: string;
+  appDescription?: string;
+  maxResumeFileSizeMB?: number;
+  maxCandidatesPerJob?: number;
+  aiScoreThresholdHire?: number;
+  aiScoreThresholdMaybe?: number;
+  defaultPipelineStage?: string;
+  enableSkillGapReport?: boolean;
+  enableAiRecommendations?: boolean;
+  orgName?: string;
+  footerText?: string;
+  dashboardWelcomeMessage?: string;
 };
 
 export const defaultConfigurablesData: TDefaultConfigurableData = {
-  appName: "My App",
+  appName: "RecruitIQ",
   logoUrl: "",
   brandColor: {
     // Base
     background:        "#ffffff",
-    foreground:        "#09090b",
+    foreground:        "#0F1F33",
     // Card
-    card:              "#ffffff",
-    cardForeground:    "#09090b",
+    card:              "#F5F8FC",
+    cardForeground:    "#0F1F33",
     // Popover
     popover:           "#ffffff",
-    popoverForeground: "#09090b",
+    popoverForeground: "#0F1F33",
     // Primary
-    primary:           "#2563eb",
+    primary:           "#1E3A5F",
     primaryForeground: "#ffffff",
     // Secondary
-    secondary:           "#f4f4f5",
-    secondaryForeground: "#18181b",
+    secondary:           "#EDF1F7",
+    secondaryForeground: "#1E3A5F",
     // Muted
-    muted:           "#f4f4f5",
-    mutedForeground: "#71717a",
+    muted:           "#EDF1F7",
+    mutedForeground: "#5A7089",
     // Accent
-    accent:           "#f4f4f5",
-    accentForeground: "#18181b",
+    accent:           "#2D7DD2",
+    accentForeground: "#ffffff",
     // Destructive
-    destructive:           "#ef4444",
-    destructiveForeground: "#fafafa",
+    destructive:           "#D93025",
+    destructiveForeground: "#ffffff",
     // Border / Input / Ring
-    border: "#e4e4e7",
-    input:  "#e4e4e7",
-    ring:   "#2563eb",
+    border: "#C8D8E8",
+    input:  "#C8D8E8",
+    ring:   "#2D7DD2",
     // Charts
-    chart1: "#f97316",
-    chart2: "#0d9488",
-    chart3: "#1e3a5f",
-    chart4: "#d4a017",
-    chart5: "#ea580c",
+    chart1: "#2D7DD2",
+    chart2: "#1E3A5F",
+    chart3: "#4AA8D8",
+    chart4: "#A8C7E8",
+    chart5: "#5A7089",
     // Navbar
-    navbarBackground: "#ffffff",
+    navbarBackground: "#1E3A5F",
     // Sidebar
-    sidebarBackground:        "#fafafa",
-    sidebarForeground:        "#3f3f46",
-    sidebarPrimary:           "#2563eb",
+    sidebarBackground:        "#162E4D",
+    sidebarForeground:        "#E8F0F9",
+    sidebarPrimary:           "#2D7DD2",
     sidebarPrimaryForeground: "#ffffff",
-    sidebarAccent:            "#f4f4f5",
-    sidebarAccentForeground:  "#18181b",
-    sidebarBorder:            "#e4e4e7",
-    sidebarRing:              "#2563eb",
+    sidebarAccent:            "#1E3A5F",
+    sidebarAccentForeground:  "#E8F0F9",
+    sidebarBorder:            "#243F5E",
+    sidebarRing:              "#2D7DD2",
   },
   font: {
-    headingFont: "Plus Jakarta Sans",
+    headingFont: "Space Grotesk",
     textFont: "Inter",
   },
-  // ─────────────────────────────────────────────────────────────────────
-  // Add new field defaults here. See RULES.md §5 for per-type shape.
-  // ─────────────────────────────────────────────────────────────────────
+  // ── RecruitIQ Defaults ────────────────────────────────────────────────
+  appTagline: "Screen smarter. Hire faster.",
+  appDescription: "AI-powered resume screening for recruiters and hiring managers.",
+  maxResumeFileSizeMB: 10,
+  maxCandidatesPerJob: 500,
+  aiScoreThresholdHire: 75,
+  aiScoreThresholdMaybe: 50,
+  defaultPipelineStage: "Applied",
+  enableSkillGapReport: true,
+  enableAiRecommendations: true,
+  orgName: "RecruitIQ",
+  footerText: "RecruitIQ — Screen smarter. Hire faster.",
+  dashboardWelcomeMessage: "Welcome back! Here's your hiring overview.",
 };

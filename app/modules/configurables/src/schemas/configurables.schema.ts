@@ -171,5 +171,19 @@ export const configurableSchemas: ConfigurableSchemas = {
         },
       ],
     },
+
+    // ── RecruitIQ App Settings ────────────────────────────────────────────
+    { fieldName: "appTagline", type: "string", required: false, label: "App Tagline", maxLength: 120 },
+    { fieldName: "appDescription", type: "string", required: false, label: "App Description", maxLength: 300 },
+    { fieldName: "maxResumeFileSizeMB", type: "number", required: false, label: "Max Resume File Size (MB)", min: 1, max: 50 },
+    { fieldName: "maxCandidatesPerJob", type: "number", required: false, label: "Max Candidates Per Job", min: 1, max: 1000 },
+    { fieldName: "aiScoreThresholdHire", type: "number", required: false, label: "AI Score Threshold: Hire (%)", min: 1, max: 100 },
+    { fieldName: "aiScoreThresholdMaybe", type: "number", required: false, label: "AI Score Threshold: Maybe (%)", min: 1, max: 100 },
+    { fieldName: "defaultPipelineStage", type: "enum", required: false, label: "Default Pipeline Stage", options: ["Applied", "Screened", "Shortlisted", "Interview", "Offer", "Hired", "Rejected"] },
+    { fieldName: "enableSkillGapReport", type: "boolean", required: false, label: "Enable Skill Gap Report" },
+    { fieldName: "enableAiRecommendations", type: "boolean", required: false, label: "Enable AI Recommendations" },
+    { fieldName: "orgName", type: "string", required: false, label: "Organization Name", maxLength: 100 },
+    { fieldName: "footerText", type: "string", required: false, label: "Footer Text", maxLength: 200 },
+    { fieldName: "dashboardWelcomeMessage", type: "string", required: false, label: "Dashboard Welcome Message", maxLength: 200 },
   ],
 };

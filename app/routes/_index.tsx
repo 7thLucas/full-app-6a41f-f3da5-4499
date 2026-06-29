@@ -1,21 +1,31 @@
+import { useEffect } from "react";
+import { useNavigate } from "react-router";
+import { useConfigurables } from "~/modules/configurables";
+import { BarChart3 } from "lucide-react";
+
 export default function IndexPage() {
+  const navigate = useNavigate();
+  const { config, loading } = useConfigurables();
+
+  useEffect(() => {
+    if (!loading) {
+      navigate("/dashboard");
+    }
+  }, [loading, navigate]);
+
+  const appName = config.appName ?? "RecruitIQ";
+  const tagline = config.appTagline ?? "Screen smarter. Hire faster.";
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-6 bg-white text-black font-sans text-center">
-      <div className="max-w-2xl space-y-6">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
-          Welcome to QuantumByte app
-        </h1>
-
-        <p className="text-base sm:text-lg md:text-xl text-stone-700 leading-relaxed">
-          If you seeing this view that mean you are seeing QuantumByte template base app.
-        </p>
-
-        <div className="pt-4">
-          <p className="text-lg sm:text-xl md:text-2xl font-semibold text-black border border-black px-6 py-4 inline-block">
-            Ask the agent to build your idea now!!!
-          </p>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-background gap-4">
+      <div className="flex items-center gap-3">
+        <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
+          <BarChart3 className="w-6 h-6 text-primary-foreground" />
         </div>
+        <h1 className="text-2xl font-bold text-foreground">{appName}</h1>
       </div>
+      <p className="text-sm text-muted-foreground">{tagline}</p>
+      <div className="w-6 h-6 border-2 border-primary border-t-transparent rounded-full animate-spin mt-2" />
     </div>
   );
 }
