@@ -1,9 +1,8 @@
 <style>
-  .mode-landscape .sl-layout { flex-direction: row; gap: 2.5rem; }
-  .mode-portrait .sl-layout { flex-direction: column; gap: 1.5rem; }
-  .mode-landscape .sl-left { width: 45%; }
-  .mode-landscape .sl-right { width: 55%; }
-  .mode-portrait .sl-left, .mode-portrait .sl-right { width: 100%; }
+  .mode-landscape .sl-panels { flex-direction: row; gap: 2rem; }
+  .mode-portrait .sl-panels { flex-direction: column; gap: 1.5rem; }
+  .mode-landscape .sl-panel { width: 50%; }
+  .mode-portrait .sl-panel { width: 100%; }
 </style>
 
 <section class="w-full h-full overflow-auto bg-white">
@@ -11,74 +10,69 @@
 
     <!-- Header -->
     <div class="flex flex-col gap-1">
-      <span class="text-xs font-semibold tracking-widest uppercase" style="color: {{config.theme.accentColor}}; font-family: {{config.theme.fontFamily}};">North Star Metric</span>
-      <h2 class="text-3xl font-bold" style="color: {{config.theme.primaryColor}}; font-family: {{config.theme.fontFamily}};">Weekly Resume Screenings — the number that matters</h2>
-      <p class="text-sm mt-1 italic" style="color: #94a3b8; font-family: Inter, sans-serif;">Projected impact — based on your inputs</p>
+      <span style="font-family: {{config.font.textFont}}; color: {{config.brandColor.secondary}}; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;">North Star Metric</span>
+      <h2 style="font-family: {{config.font.headingFont}}; color: {{config.brandColor.primary}}; font-size: 2.1rem; font-weight: 800; line-height: 1.2;">Weekly Resume Screenings — the number that matters</h2>
+      <p style="font-family: {{config.font.textFont}}; color: {{config.brandColor.mutedForeground}}; font-size: 0.82rem; font-style: italic; margin-top: 0.25rem;">Projected impact — based on your inputs</p>
     </div>
 
-    <div class="sl-layout flex flex-1">
+    <!-- Two panels -->
+    <div class="sl-panels flex flex-1">
 
-      <!-- Left: Operation definition + formula -->
-      <div class="sl-left flex flex-col gap-4">
+      <!-- Left: Operation definition + WVO formula -->
+      <div class="sl-panel flex flex-col gap-4">
 
-        <!-- Operation definition -->
-        <div class="rounded-2xl p-5" style="background: #f8fafc; border: 1px solid #e2e8f0;">
-          <p class="text-xs font-semibold uppercase tracking-wide mb-2" style="color: {{config.theme.accentColor}}; font-family: {{config.theme.fontFamily}};">Verified Operation</p>
-          <p class="font-semibold text-base mb-1" style="color: {{config.theme.primaryColor}}; font-family: {{config.theme.fontFamily}};">Resume Screening Completed</p>
-          <p class="text-sm" style="color: #475569; font-family: Inter, sans-serif;">AI analysis run on one candidate for a specific job — match score, summary, and recommendation generated and saved.</p>
+        <div class="rounded-2xl p-5" style="background-color: {{config.brandColor.card}}; border: 1px solid {{config.brandColor.border}};">
+          <p style="font-family: {{config.font.textFont}}; color: {{config.brandColor.secondary}}; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem;">Verified Operation</p>
+          <p style="font-family: {{config.font.headingFont}}; color: {{config.brandColor.primary}}; font-size: 0.95rem; font-weight: 700; margin-bottom: 0.35rem;">Resume Screening Completed</p>
+          <p style="font-family: {{config.font.textFont}}; color: {{config.brandColor.mutedForeground}}; font-size: 0.82rem; line-height: 1.6;">AI analysis run on one candidate for a specific job — match score, strengths/weaknesses summary, and hiring recommendation generated and saved.</p>
         </div>
 
-        <!-- WVO formula -->
-        <div class="rounded-2xl p-5" style="background: #eff6ff; border: 1px solid {{config.theme.accentColor}};">
-          <p class="text-xs font-semibold uppercase tracking-wide mb-3" style="color: {{config.theme.accentColor}}; font-family: {{config.theme.fontFamily}};">Weekly Verified Operations (WVO)</p>
-          <div class="flex flex-col gap-2 text-sm" style="font-family: Inter, sans-serif; color: #334155;">
+        <div class="rounded-2xl p-5" style="background-color: {{config.brandColor.accent}}; border: 1px solid {{config.brandColor.secondary}};">
+          <p style="font-family: {{config.font.textFont}}; color: {{config.brandColor.secondary}}; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem;">Weekly Verified Operations (WVO)</p>
+          <div class="flex flex-col gap-2" style="font-family: {{config.font.textFont}}; font-size: 0.82rem; color: {{config.brandColor.foreground}};">
             <div class="flex justify-between items-center">
-              <span>Active recruiters/week</span>
-              <span class="font-semibold px-2 py-0.5 rounded text-xs" style="background: #fef9c3; color: #713f12;">3 — Assumption, adjust</span>
+              <span>Active recruiters / week</span>
+              <span style="font-weight: 700; padding: 0.15rem 0.6rem; border-radius: 6px; background-color: #fef9c3; color: #713f12; font-size: 0.72rem;">3 — Assumption, adjust</span>
             </div>
             <div class="flex justify-between items-center">
-              <span>Candidates screened per recruiter/week</span>
-              <span class="font-semibold px-2 py-0.5 rounded text-xs" style="background: #fef9c3; color: #713f12;">20 — Assumption, adjust</span>
+              <span>Candidates screened per recruiter / week</span>
+              <span style="font-weight: 700; padding: 0.15rem 0.6rem; border-radius: 6px; background-color: #fef9c3; color: #713f12; font-size: 0.72rem;">20 — Assumption, adjust</span>
             </div>
-            <div class="w-full border-t my-1" style="border-color: #bfdbfe;"></div>
+            <div style="border-top: 1px solid {{config.brandColor.border}}; margin: 0.35rem 0;"></div>
             <div class="flex justify-between items-center">
-              <span class="font-bold">= 3 × 20</span>
-              <span class="font-bold text-lg" style="color: {{config.theme.primaryColor}};">60 screenings / week</span>
+              <span style="font-weight: 700;">= 3 × 20</span>
+              <span style="font-family: {{config.font.headingFont}}; font-weight: 800; font-size: 1.35rem; color: {{config.brandColor.primary}};">60 screenings / week</span>
             </div>
           </div>
         </div>
 
       </div>
 
-      <!-- Right: Value derivation -->
-      <div class="sl-right flex flex-col gap-4">
+      <!-- Right: Value derivation + ROI -->
+      <div class="sl-panel flex flex-col gap-4">
 
-        <!-- Value per operation -->
-        <div class="rounded-2xl p-5" style="background: #f8fafc; border: 1px solid #e2e8f0;">
-          <p class="text-xs font-semibold uppercase tracking-wide mb-3" style="color: {{config.theme.accentColor}}; font-family: {{config.theme.fontFamily}};">Value Per Screening</p>
-          <div class="flex flex-col gap-2 text-sm" style="font-family: Inter, sans-serif; color: #334155;">
-            <div class="flex justify-between"><span>Time saved per screening</span><span class="font-semibold">25 min</span></div>
-            <div class="flex justify-between"><span>Recruiter hourly cost</span><span class="font-semibold">$35 / hr</span></div>
-            <div class="flex justify-between"><span>25 min × $35/hr</span><span class="font-semibold">≈ $14.58 / screening</span></div>
+        <div class="rounded-2xl p-5" style="background-color: {{config.brandColor.card}}; border: 1px solid {{config.brandColor.border}};">
+          <p style="font-family: {{config.font.textFont}}; color: {{config.brandColor.secondary}}; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem;">Value Per Screening</p>
+          <div class="flex flex-col gap-2" style="font-family: {{config.font.textFont}}; font-size: 0.82rem; color: {{config.brandColor.foreground}};">
+            <div class="flex justify-between"><span>Time saved per screening</span><span style="font-weight: 700;">25 min</span></div>
+            <div class="flex justify-between"><span>Recruiter hourly cost</span><span style="font-weight: 700;">$35 / hr</span></div>
+            <div class="flex justify-between"><span>25 min × ($35/60)</span><span style="font-weight: 700;">≈ $14.58 / screening</span></div>
           </div>
         </div>
 
-        <!-- Total value -->
-        <div class="rounded-2xl p-5 flex flex-col gap-4" style="background: {{config.theme.primaryColor}};">
-          <p class="text-xs font-semibold uppercase tracking-wide" style="color: rgba(255,255,255,0.6); font-family: {{config.theme.fontFamily}};">Projected Total Value</p>
-          <div class="flex flex-col gap-3">
-            <div class="flex justify-between items-end">
-              <div>
-                <p class="text-xs" style="color: rgba(255,255,255,0.65); font-family: Inter, sans-serif;">60 ops × $14.58</p>
-                <p class="text-2xl font-bold" style="color: #ffffff; font-family: {{config.theme.fontFamily}};">$875 / week</p>
-              </div>
-              <div class="text-right">
-                <p class="text-xs" style="color: rgba(255,255,255,0.65); font-family: Inter, sans-serif;">$875 × 52 weeks</p>
-                <p class="text-2xl font-bold" style="color: {{config.theme.accentColor}}; font-family: {{config.theme.fontFamily}};">$45,500 / year</p>
-              </div>
+        <div class="rounded-2xl p-5 flex flex-col gap-4" style="background-color: {{config.brandColor.primary}};">
+          <p style="font-family: {{config.font.textFont}}; color: rgba(255,255,255,0.55); font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;">Projected Total Value</p>
+          <div class="flex justify-between items-end flex-wrap gap-3">
+            <div>
+              <p style="font-family: {{config.font.textFont}}; color: rgba(255,255,255,0.65); font-size: 0.75rem;">60 ops × $14.58</p>
+              <p style="font-family: {{config.font.headingFont}}; color: {{config.brandColor.primaryForeground}}; font-size: 2rem; font-weight: 800; line-height: 1;">$875 / week</p>
+            </div>
+            <div class="text-right">
+              <p style="font-family: {{config.font.textFont}}; color: rgba(255,255,255,0.65); font-size: 0.75rem;">$875 × 52 weeks</p>
+              <p style="font-family: {{config.font.headingFont}}; color: {{config.brandColor.secondary}}; font-size: 2rem; font-weight: 800; line-height: 1;">$45,500 / yr</p>
             </div>
           </div>
-          <p class="text-xs" style="color: rgba(255,255,255,0.5); font-family: Inter, sans-serif;">Based on recruiter time reclaimed. Adjust assumption chips above to match your actual team size and volume.</p>
+          <p style="font-family: {{config.font.textFont}}; color: rgba(255,255,255,0.45); font-size: 0.72rem; line-height: 1.6;">Based on recruiter time reclaimed from manual screening. Adjust assumption chips on the left to match your actual team size and volume.</p>
         </div>
 
       </div>
